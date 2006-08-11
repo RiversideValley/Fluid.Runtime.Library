@@ -4,8 +4,8 @@ convenience of application and driver writers.
 """
 
 import os, urlparse, urllib, types
-from . import handler
-from . import xmlreader
+import handler
+import xmlreader
 
 try:
     _StringTypes = [types.StringType, types.UnicodeType]
@@ -68,6 +68,8 @@ def quoteattr(data, entities={}):
     the optional entities parameter.  The keys and values must all be
     strings; each key will be replaced with its corresponding value.
     """
+    entities = entities.copy()
+    entities.update({'\n': '&#10;', '\r': '&#13;', '\t':'&#9;'})
     data = escape(data, entities)
     if '"' in data:
         if "'" in data:

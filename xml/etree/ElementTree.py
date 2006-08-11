@@ -84,7 +84,7 @@ __all__ = [
     "tostring",
     "TreeBuilder",
     "VERSION", "XML",
-    "XMLTreeBuilder",
+    "XMLParser", "XMLTreeBuilder",
     ]
 
 ##
@@ -1112,7 +1112,7 @@ class XMLTreeBuilder:
 
     def __init__(self, html=0, target=None):
         try:
-            from xmlcore.parsers import expat
+            from xml.parsers import expat
         except ImportError:
             raise ImportError(
                 "No module named expat; use SimpleXMLTreeBuilder instead"
@@ -1194,7 +1194,7 @@ class XMLTreeBuilder:
             try:
                 self._target.data(self.entity[text[1:-1]])
             except KeyError:
-                from xmlcore.parsers import expat
+                from xml.parsers import expat
                 raise expat.error(
                     "undefined entity %s: line %d, column %d" %
                     (text, self._parser.ErrorLineNumber,
@@ -1255,3 +1255,6 @@ class XMLTreeBuilder:
         tree = self._target.close()
         del self._target, self._parser # get rid of circular references
         return tree
+
+# compatibility
+XMLParser = XMLTreeBuilder
