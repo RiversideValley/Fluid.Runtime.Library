@@ -3,12 +3,13 @@ import unittest
 
 from .. import tool_imports_for_tests
 with tool_imports_for_tests():
-    from c_analyzer_common import SOURCE_DIRS
-    from c_analyzer_common.known import DATA_FILE as KNOWN_FILE
-    from c_parser import info
-    import c_globals as cg
-    from c_globals.supported import IGNORED_FILE
-    from c_globals.__main__ import cmd_check, cmd_show, parse_args, main
+    from c_analyzer.variables import info
+    from cpython import SOURCE_DIRS
+    from cpython.supported import IGNORED_FILE
+    from cpython.known import DATA_FILE as KNOWN_FILE
+    from cpython.__main__ import (
+            cmd_check, cmd_show, parse_args, main,
+            )
 
 
 TYPICAL = [
@@ -46,6 +47,8 @@ class CMDBase(unittest.TestCase):
 
     maxDiff = None
 
+#    _return_known_from_file = None
+#    _return_ignored_from_file = None
     _return_find = ()
 
     @property
@@ -56,8 +59,16 @@ class CMDBase(unittest.TestCase):
             self._calls = []
             return self._calls
 
-    def _find(self, *args):
-        self.calls.append(('_find', args))
+#    def _known_from_file(self, *args):
+#        self.calls.append(('_known_from_file', args))
+#        return self._return_known_from_file or {}
+#
+#    def _ignored_from_file(self, *args):
+#        self.calls.append(('_ignored_from_file', args))
+#        return self._return_ignored_from_file or {}
+
+    def _find(self, known, ignored, skip_objects=False):
+        self.calls.append(('_find', (known, ignored, skip_objects)))
         return self._return_find
 
     def _show(self, *args):
@@ -78,41 +89,35 @@ class CheckTests(CMDBase):
                   _print=self._print,
                   )
 
-        self.assertEqual(self.calls[0], (
-            '_find', (
-                SOURCE_DIRS,
-                KNOWN_FILE,
-                IGNORED_FILE,
-                ),
-            ))
+        self.assertEqual(
+                self.calls[0],
+                ('_find', (KNOWN_FILE, IGNORED_FILE, False)),
+                )
 
     def test_all_supported(self):
         self._return_find = [(v, s) for v, s in TYPICAL if s]
         dirs = ['src1', 'src2', 'Include']
 
         cmd_check('check',
-                 dirs,
-                 ignored='ignored.tsv',
-                 known='known.tsv',
-                 _find=self._find,
-                 _show=self._show,
-                 _print=self._print,
-                 )
+                  known='known.tsv',
+                  ignored='ignored.tsv',
+                  _find=self._find,
+                  _show=self._show,
+                  _print=self._print,
+                  )
 
         self.assertEqual(self.calls, [
-            ('_find', (dirs, 'known.tsv', 'ignored.tsv')),
+            ('_find', ('known.tsv', 'ignored.tsv', False)),
             #('_print', ('okay',)),
             ])
 
     def test_some_unsupported(self):
         self._return_find = TYPICAL
-        dirs = ['src1', 'src2', 'Include']
 
         with self.assertRaises(SystemExit) as cm:
             cmd_check('check',
-                      dirs,
-                      ignored='ignored.tsv',
                       known='known.tsv',
+                      ignored='ignored.tsv',
                       _find=self._find,
                       _show=self._show,
                       _print=self._print,
@@ -120,7 +125,7 @@ class CheckTests(CMDBase):
 
         unsupported = [v for v, s in TYPICAL if not s]
         self.assertEqual(self.calls, [
-            ('_find', (dirs, 'known.tsv', 'ignored.tsv')),
+            ('_find', ('known.tsv', 'ignored.tsv', False)),
             ('_print', ('ERROR: found unsupported global variables',)),
             ('_print', ()),
             ('_show', (sorted(unsupported),)),
@@ -140,20 +145,15 @@ class ShowTests(CMDBase):
                  _print=self._print,
                  )
 
-        self.assertEqual(self.calls[0], (
-            '_find', (
-                SOURCE_DIRS,
-                KNOWN_FILE,
-                IGNORED_FILE,
-                ),
-            ))
+        self.assertEqual(
+                self.calls[0],
+                ('_find', (KNOWN_FILE, IGNORED_FILE, False)),
+                )
 
     def test_typical(self):
         self._return_find = TYPICAL
-        dirs = ['src1', 'src2', 'Include']
 
         cmd_show('show',
-                 dirs,
                  known='known.tsv',
                  ignored='ignored.tsv',
                  _find=self._find,
@@ -164,7 +164,7 @@ class ShowTests(CMDBase):
         supported = [v for v, s in TYPICAL if s]
         unsupported = [v for v, s in TYPICAL if not s]
         self.assertEqual(self.calls, [
-            ('_find', (dirs, 'known.tsv', 'ignored.tsv')),
+            ('_find', ('known.tsv', 'ignored.tsv', False)),
             ('_print', ('supported:',)),
             ('_print', ('----------',)),
             ('_show', (sorted(supported),)),
@@ -201,7 +201,7 @@ class ParseArgsTests(unittest.TestCase):
         self.assertEqual(cmdkwargs, {
             'ignored': IGNORED_FILE,
             'known': KNOWN_FILE,
-            'dirs': SOURCE_DIRS,
+            #'dirs': SOURCE_DIRS,
             })
 
     def test_check_full_args(self):
@@ -209,16 +209,16 @@ class ParseArgsTests(unittest.TestCase):
             'check',
             '--ignored', 'spam.tsv',
             '--known', 'eggs.tsv',
-            'dir1',
-            'dir2',
-            'dir3',
+            #'dir1',
+            #'dir2',
+            #'dir3',
             ])
 
         self.assertEqual(cmd, 'check')
         self.assertEqual(cmdkwargs, {
             'ignored': 'spam.tsv',
             'known': 'eggs.tsv',
-            'dirs': ['dir1', 'dir2', 'dir3']
+            #'dirs': ['dir1', 'dir2', 'dir3']
             })
 
     def test_show_no_args(self):
@@ -230,7 +230,7 @@ class ParseArgsTests(unittest.TestCase):
         self.assertEqual(cmdkwargs, {
             'ignored': IGNORED_FILE,
             'known': KNOWN_FILE,
-            'dirs': SOURCE_DIRS,
+            #'dirs': SOURCE_DIRS,
             'skip_objects': False,
             })
 
@@ -239,16 +239,16 @@ class ParseArgsTests(unittest.TestCase):
             'show',
             '--ignored', 'spam.tsv',
             '--known', 'eggs.tsv',
-            'dir1',
-            'dir2',
-            'dir3',
+            #'dir1',
+            #'dir2',
+            #'dir3',
             ])
 
         self.assertEqual(cmd, 'show')
         self.assertEqual(cmdkwargs, {
             'ignored': 'spam.tsv',
             'known': 'eggs.tsv',
-            'dirs': ['dir1', 'dir2', 'dir3'],
+            #'dirs': ['dir1', 'dir2', 'dir3'],
             'skip_objects': False,
             })
 

@@ -4,10 +4,10 @@ import unittest
 from ..util import PseudoStr, StrProxy, Object
 from .. import tool_imports_for_tests
 with tool_imports_for_tests():
-    from c_analyzer_common.info import ID, UNKNOWN
-    from c_parser.info import (
-        normalize_vartype, Variable,
-        )
+    from c_analyzer.common.info import UNKNOWN, ID
+    from c_analyzer.variables.info import (
+            normalize_vartype, Variable
+            )
 
 
 class NormalizeVartypeTests(unittest.TestCase):
