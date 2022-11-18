@@ -4,7 +4,7 @@
 
 #### **SOFTWARE**
 
-The Software 
+The Software is the source-code, executable files, documentation and all associated documents, usually found within this repository.
 
 #### **FIRST PARTY**
 
@@ -12,9 +12,9 @@ The First Party are the Copyright Holders of the Software, as defined in **1️�
 
 #### **THIRD PARTY**
 
-The Third Party is the party the Software is being licensed to,
+The Third Party is any party that is **not** the First Party - see the **📖 Oxford English Dictionary** for details.
 
-#### **ELIGIBILITY**
+#### **Eligible Party**
 
 An Eligible Party is a party that has been accepted by the First Party. By default manner, the First Party automatically accepts any party that wishes to use the software with no medium of communication other than this license required. The First Party may restrict this license for a Third Party, under any period of time, per their discretion.
 
@@ -24,7 +24,8 @@ An Eligible Party is a party that has been accepted by the First Party. By defau
 ### 1️⃣ Section I: Parties
 
 Copyright (c) 2022 Depth (the "First Party")
-Licensed to any eligible party (the "Third Party")
+
+Licensed to any Eligible Party.
 
 
 ### 2️⃣ Section II: Licensing
@@ -32,8 +33,7 @@ Licensed to any eligible party (the "Third Party")
 
 
 Permission is hereby granted, free of charge, to any Eligible Party obtaining a substantial portion
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
+of this Software, to deal in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
