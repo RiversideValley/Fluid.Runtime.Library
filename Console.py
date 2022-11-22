@@ -1,2 +1,2 @@
-def Write(Text):
+def WriteLine(Text):
   print(Text)
