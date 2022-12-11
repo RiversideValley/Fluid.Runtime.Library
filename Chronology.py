@@ -2,9 +2,10 @@
 
 import time as Legacy
 
-def Time(TimeZone, WithSeconds=None):
+def Time(TimeZone: str, WithSeconds=None):
   if TimeZone == "UCT":
-    if WithSeconds == False:
+    if WithSeconds == True:
+      return "# todo"
+    else:
       CurrentStructuredTime = Legacy.gmtime()
-      # to-do
-    
+      return f"{CurrentStructuredTime.tm_hour}:{CurrentStructuredTime.tm_min}"
