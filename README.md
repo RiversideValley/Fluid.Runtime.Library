@@ -1,13 +1,16 @@
 # ⚡ Flux
 
-#### A usable yet professional Python framework.
+#### A professional yet usable Python framework
 
 <p align="center">
-  <a title="Azure Pipeline" target="_blank" href="https://dev.azure.com/Andrexial/Flux">
-    <img align="left" src="https://dev.azure.com/Andrexial/Flux/_apis/build/status/Build%20Pipeline%20(x64)?branchName=main">
-  </a>
-  <a title="GitHub Releases" target="_blank" href="https://github.com/OpenAndrexial/Flux/tree/stable">
+  <a title="GitHub Releases" target="_blank" href="https://github.com/OpenAndrexial/Flux/releases">
     <img align="left" src="https://img.shields.io/github/v/release/OpenAndrexial/Flux?include_prereleases" alt="Release" />
+  </a>
+  <a title="GitHub Releases" target="_blank" href="https://github.com/OpenAndrexial/Flux/releases">
+    <img align="left" src="https://img.shields.io/github/downloads/OpenAndrexial/Flux/total" alt="Release" />
+  </a>
+  <a title="GitHub Releases" target="_blank" href="https://github.com/OpenAndrexial/Flux/releases">
+    <img align="left" src="https://img.shields.io/github/repo-size/OpenAndrexial/Flux?color=%23cc0000" alt="Release" />
   </a>
 </p>
 
@@ -15,45 +18,48 @@
 
 ---
 
-## ➕ Installation
+<!--## 🎁 Installation
 
 ### Via GitHub
 
-See the [releases page](https://github.com/OpenAndrexial/Flux/releases)
+See the [releases page](https://github.com/OpenAndrexial/Emerald/releases)
 
 ### Building from source
 ###### ⭐Recommended⭐
 
 This is our preferred method.
-See [this section](#-building-the-code)
+See [this section](#-building-the-code)-->
 
-## 🧑‍💻 Contributing
+<!--### 📸 Screenshots
+
+<a title="Emerald Screenshot" target="_blank" href="https://github.com/OpenAndrexial/Emerald">
+  <img align="left" src="https://user-images.githubusercontent.com/82730163/210150183-fd324c12-5a90-4ffb-964d-c8ccae2c9cee.png" alt="Release" />
+</a>-->
+
+<!--###### 📝 This screenshot is from [`redesign`](https://github.com/OpenAndrexial/Emerald/pull/19)-->
+
+## 🦜 Contributing & Feedback
 
 There are multiple ways to participate in the community:
 
-- [Submit bugs and feature requests](https://github.com/OpenAndrexial/Flux/issues/new/choose).
+- Upvote popular feature requests
+- [Submit a new feature](https://github.com/OpenAndrexial/Flux/pulls)
+- [File bugs and feature requests](https://github.com/OpenAndrexial/Flux/issues/new/choose).
 - Review source [code changes](https://github.com/OpenAndrexial/Flux/commits)
 
 ### 🏗️ Codebase Structure
 
-<!--```
+```
 .
-└──src                               // The source code.
-   ├──Esme.Services                  // Simple computer functions that Esme can complete
-   └──Esme.Intelligence              // Intelligence repository
-```-->
-<!--   └──Esme.Hypervisor                // Simulation software-->
-<!--### 🗃️ Contributors
+├──src                               // Source code for System modules
+└──System.py                         // Collection of all submodules in one module
+```
 
-<a href="https://github.com/DepthCDLS/Esmerelda/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=DepthCDLS/Esmerelda" />
+### 🗃️ Contributors
+
+<a href="https://github.com/OpenAndrexial/Flux/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=OpenAndrexial/Flux" />
 </a>
-
-## 🦜 Feedback
-
-- [Request a new feature](https://github.com/DepthCDLS/Esmerelda/pulls)
-- Upvote popular feature requests
-- [File an issue](https://github.com/DepthCDLS/Esmerelda/issues/new/choose)
 
 ## 🔨 Building the Code
 
@@ -62,31 +68,38 @@ There are multiple ways to participate in the community:
 Ensure you have following components:
 
 - [Git](https://git-scm.com/)
-- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) with following individual components:
-  - Python SDK
+- [Visual Studio Code](https://code.visualstudio.com/) with following individual components:
+  - Python
+  - Pylance (recommended)
+- [Python](https://www.python.org/downloads/)
 
 ### 2. Git
 
 Clone the repository:
 
-```git
-git clone https://github.com/DepthCDLS/Esmerelda
+```bash
+git clone https://github.com/OpenAndrexial/Flux
 ```
 
-Choose which channel you want via branches. You can choose from either [stable](https://github.com/DepthCDLS/Esmerelda/tree/stable) or [dev](https://github.com/DepthCDLS/Esmerelda/tree/dev).
+```http
+https://github.com/OpenAndrexial/Flux
+```
+
+```console
+git@github.com:OpenAndrexial/Flux.git
+```
+
+```bash
+gh repo clone OpenAndrexial/Flux
+```
 
 ### 4. Build the project
 
-- Open `Esmerelda.sln`.
-- Choose which function you want Esme to start with and right-click on the appropriate project, and select 'Set as startup item'
-- Build with `DEBUG|x64`
-
-## 💳 Credit
-
-- Icons8 created the current logo.
+- Open `System.py`.
+- Run with Python
 
 ## ⚖️ License
 
 Copyright (c) 2022-2023 Depth
 
-Licensed under the MIT license as stated in the [LICENSE](LICENSE.md).-->
+Licensed under the MIT license as stated in the [LICENSE](LICENSE.md).
