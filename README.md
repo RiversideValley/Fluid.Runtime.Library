@@ -3,6 +3,9 @@
 #### A professional yet usable Python framework
 
 <p align="center">
+  <a title="Codefactor" target="_blank" href="https://github.com/OpenAndrexial/Flux/commits">
+    <img align="left" src="https://www.codefactor.io/repository/github/openandrexial/flux/badge" alt="Release" />
+  </a>
   <a title="GitHub Releases" target="_blank" href="https://github.com/OpenAndrexial/Flux/releases">
     <img align="left" src="https://img.shields.io/github/v/release/OpenAndrexial/Flux?include_prereleases" alt="Release" />
   </a>
