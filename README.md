@@ -87,6 +87,6 @@ Choose which channel you want via branches. You can choose from either [stable](
 
 ## ⚖️ License
 
-Copyright (c) 2022 Depth
+Copyright (c) 2022-2023 Depth
 
 Licensed under the MIT license as stated in the [LICENSE](LICENSE.md).-->
