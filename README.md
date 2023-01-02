@@ -10,9 +10,6 @@
     <img align="left" src="https://img.shields.io/github/v/release/OpenAndrexial/Flux?include_prereleases" alt="Release" />
   </a>
   <a title="GitHub Releases" target="_blank" href="https://github.com/OpenAndrexial/Flux/releases">
-    <img align="left" src="https://img.shields.io/github/downloads/OpenAndrexial/Flux/total" alt="Release" />
-  </a>
-  <a title="GitHub Releases" target="_blank" href="https://github.com/OpenAndrexial/Flux/releases">
     <img align="left" src="https://img.shields.io/github/repo-size/OpenAndrexial/Flux" alt="Release" />
   </a>
 </p>
