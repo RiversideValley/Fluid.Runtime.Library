@@ -1,0 +1,30 @@
+name: 📝 Tracker
+description: Tracker for a feature. Use only if the feature is definitely going to happen (else, request a feature)
+labels: [tracker]
+body:
+  - type: textarea
+    attributes:
+      label: 🛤️ Feature
+      description: What is the feature you'd like to implement?
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: 📄 Description
+      description: A clear and concise description of what is going to happen. Include things like use cases, drawbacks, etc.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 🏃 Progress
+      description: A clear and concise description of the progress or milestones as part of this tracker.
+      placeholder: |
+        - [x] Accomplish X
+        - [ ] Accomplish Y
+        - [ ] Accomplish Z
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 📸 Assets
+      description: A list of assets (screenshots, mockups) relevant to this tracker.
