@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/OpenAndrexial/Flux/discussions
+    about: Discuss topics with the community, rather than directly with the developers. Use this for things to share and examples of code, or less important issues.
+  - name: 📧 Mail
+    url: mailto:crescent@andrexial.org.uk
+    about: Email the Head of Flux department at Depth (@OpenAndrex)
