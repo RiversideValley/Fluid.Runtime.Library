@@ -63,7 +63,7 @@ There are multiple ways to participate in the community:
 
 ## 🔨 Building the Code
 
-##### 1. Prerequisites
+### 1. Prerequisites
 
 Ensure you have following components:
 
