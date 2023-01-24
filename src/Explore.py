@@ -37,3 +37,6 @@ def Access(FileToAccessName: str, FileToAccessEncoding=None):
     Foundation method for the purpose of a allowing the developer to access files completely on the end-user's computer.
     """
     return open(FileToAccessName, "r+", encoding = FileToAccessEncoding)
+
+# TODO: Find a way to automatically close the explorer upon completion
+# TODO
