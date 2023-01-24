@@ -1,0 +1,70 @@
+name: 🐛 Bug Report
+description: Create a bug report to help improve the Flux codebase
+labels: [bug]
+assignees: [OpenAndrex]
+body:
+  - type: checkboxes
+    attributes:
+      label: ⏱️ Before you start...
+      options:
+        - label: Have you updated the Foundation? You might be using an old version.
+          required: true
+        - label: Have you checked if a similar issue has already been reported?
+          required: true
+  - type: dropdown
+    id: windows
+    attributes:
+      label: 🪟 What OS are you on?
+      multiple: true
+      options:
+        - Windows 10
+        - Windows 11
+        - Linux
+        - macOS
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 🔢 What version/architecture of Flux (Foundation/System) are you on?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 📄 Description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: 💾 Repository
+      description: Provide a link to where your code is stored.
+      placeholder: https://dev.azure.com/Contoso/MyApp/_git/MyRepo, https://github.com/Contoso/MyApp
+  - type: textarea
+    attributes:
+      label: 🪜 Steps To Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Enable '...'
+        2. Write '...'
+        3. Run using '...' compiler
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: 🤔 Expected behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 📟 Error Trace
+      description: Copy and paste the error from your compiler/terminal/CI over where it says 'paste here' (remember to remove the 'paste here' when you're done)
+      value: |
+        ```
+        paste here
+        ```
+  - type: textarea
+    attributes:
+      label: 📸 Assets
+      description: |
+        A list of assets (errors, screenshots, logs) relevant to the bug.

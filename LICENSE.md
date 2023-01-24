@@ -1,4 +1,9 @@
-**Depth Liberum Modularis License**
+**Depth Nightshade Liberum License**
+
+```
+Emoji are used within this document to outwardly express conventions of easy-to-read documents, and/or help other cultures read the text at their convenience, if some words may be unclear to them.
+The Emoji contained within these documents are may not wholly represent the associated meaning, and the First Party does not warrant the misunderstanding of such.
+```
 
 ## 📖 Definitions
 
@@ -23,7 +28,7 @@ An Eligible Party is a party that has been accepted by the First Party. By defau
 
 ### 1️⃣ Section I: Parties
 
-Copyright (c) 2022 Depth (the "First Party")
+Copyright (c) 2022-2023 Depth (the "First Party")
 
 Licensed to any Eligible Party.
 
