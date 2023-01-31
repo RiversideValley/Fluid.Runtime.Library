@@ -28,7 +28,7 @@ An Eligible Party is a party that has been accepted by the First Party. By defau
 
 ### 1️⃣ Section I: Parties
 
-Copyright (c) `year` `name` (the "First Party")
+Copyright (c) 2022-2023 Depth (the "First Party")
 
 Licensed to any Eligible Party.
 
