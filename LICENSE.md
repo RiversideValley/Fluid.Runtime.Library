@@ -1,4 +1,4 @@
-**Depth Nightshade Liberum License**
+**Nightshade Liberum License**
 
 ```
 Emoji are used within this document to outwardly express conventions of easy-to-read documents, and/or help other cultures read the text at their convenience, if some words may be unclear to them.
@@ -19,7 +19,7 @@ The First Party are the Copyright Holders of the Software, as defined in **1️�
 
 The Third Party is any party that is **not** the First Party - see the **📖 Oxford English Dictionary** for details.
 
-#### **Eligible Party**
+#### **ELIGIBLE PARTY**
 
 An Eligible Party is a party that has been accepted by the First Party. By default manner, the First Party automatically accepts any party that wishes to use the software with no medium of communication other than this license required. The First Party may restrict this license for a Third Party, under any period of time, per their discretion.
 
@@ -28,7 +28,7 @@ An Eligible Party is a party that has been accepted by the First Party. By defau
 
 ### 1️⃣ Section I: Parties
 
-Copyright (c) 2022-2023 Depth (the "First Party")
+Copyright (c) `year` `name` (the "First Party")
 
 Licensed to any Eligible Party.
 
@@ -45,6 +45,8 @@ furnished to do so, subject to the following conditions:
 
 **WHILE YOU MAY INCLUDE THIS SOFTWARE WITHIN ANOTHER INSTANCE OF SOFTWARE, IT IS STRICTLY PROHIBITED AND NOT ALLOWED TO PERFORM ACTIONS OR MAKE STATEMENTS IN ANY WAY THAT IMPLIES THE EXACT CREATION OF THIS SOFTWARE BY THE ELIGIBLE PARTY OR THE ENDORSEMENT OF THE FIRST PARTY INSIDE A THIRD PARTY INSTANCE OF THIS SOFTWARE.**
 
+THE FIRST PARTY ASSERTS THE MORAL RIGHT TO BE IDENTIFIED AS THE DEVELOPER OR PRODUCER OF THIS SOFTWARE.
+
 **THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -53,4 +55,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.**
 
-**IF A THIRD PARTY CONTRADICTS THIS LICENSE, WITHOUT PERMISSION BY MEDIUM OF OFFICIAL COMMUNICATION, THE FIRST PARTY RESERVES THE RIGHT, IN THE NAME OF THE BRITISH LAW TO PERFORM SOME FORM OF BLOCK OR TAKE-DOWN OF THE SOFTWARE, PER THE FIRST PARTY'S DISCRETION.**
+**IF A THIRD PARTY CONTRADICTS THIS LICENSE, WITHOUT PERMISSION BY MEDIUM OF OFFICIAL COMMUNICATION, THE FIRST PARTY RESERVES THE RIGHT, IN THE NAME OF THE LAW TO CLAIM OR SEIZE THE CONTRADICTING SOFTWARE RIGHTFULLY AND SHOULD NOT BE HINDERED TO DO SO, PER THE FIRST PARTY'S DISCRETION.**
