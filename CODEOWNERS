@@ -8,4 +8,4 @@
 /src/     @RiversideValley/Flux git@andrexial.org.uk @MetropolitanCitizen
 *.md      @MetropolitanCitizen @RiversideValley/Flux git@andrexial.org.uk
 /.github/ @MetropolitanCitizen git@andrexial.org.uk
-*.fl      @RiversideValley/Flux @RiversideValley git@andrexial.org.uk @MetropolitanCitizen
+*.fl      @RiversideValley/Flux @RiversideValley/Inspire @RiversideValley/Momentum @RiversideValley/Esmerelda @RiversideValley/Protocol git@andrexial.org.uk @MetropolitanCitizen
