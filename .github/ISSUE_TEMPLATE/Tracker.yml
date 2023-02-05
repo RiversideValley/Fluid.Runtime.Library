@@ -1,7 +1,7 @@
 name: 📝 Tracker
 description: Tracker for a feature. Use only if the feature is definitely going to happen (else, request a feature)
 labels: [tracker]
-assignees: [OpenAndrex]
+assignees: [Lamparter]
 body:
   - type: textarea
     attributes:
