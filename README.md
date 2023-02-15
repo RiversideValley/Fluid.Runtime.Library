@@ -4,7 +4,7 @@
 
 <p align="center">
   <a title="Codefactor" target="_blank" href="https://github.com/RiversideValley/Flux/commits">
-    <img align="left" src="https://www.codefactor.io/repository/github/RiversideValley/flux/badge" alt="Release" />
+    <img align="left" src="https://www.codefactor.io/repository/github/RiversideValley/Fluid.Runtime/badge" alt="Release" />
   </a>
   <a title="GitHub Releases" target="_blank" href="https://github.com/RiversideValley/Flux/releases">
     <img align="left" src="https://img.shields.io/github/v/release/RiversideValley/Flux?include_prereleases" alt="Release" />
