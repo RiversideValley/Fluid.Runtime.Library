@@ -4,9 +4,9 @@
 # It uses the same pattern rule for gitignore file
 # https://git-scm.com/docs/gitignore#_pattern_format
 
-*          git@andrexial.org.uk @MetropolitanCitizen
-/src/      @RiversideValley/Flux git@andrexial.org.uk @MetropolitanCitizen
-*.md       @MetropolitanCitizen @RiversideValley/Flux git@andrexial.org.uk
-/.github/  @MetropolitanCitizen git@andrexial.org.uk
-*.fl       @RiversideValley/Flux git@andrexial.org.uk @MetropolitanCitizen
-LICENSE.md @RiversideValley/Nightshade @MetropolitanCitizen git@andrexial.org.uk
+*          git@andrexial.org.uk @Lamparter
+/src/      @RiversideValley/Flux git@andrexial.org.uk @Lamparter
+*.md       @Lamparter @RiversideValley/Flux git@andrexial.org.uk
+/.github/  @Lamparter git@andrexial.org.uk
+*.fl       @RiversideValley/Flux git@andrexial.org.uk @Lamparter
+LICENSE.md @RiversideValley/Nightshade @Lamparter git@andrexial.org.uk
