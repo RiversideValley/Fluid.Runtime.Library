@@ -5,8 +5,8 @@
 # https://git-scm.com/docs/gitignore#_pattern_format
 
 *          git@andrexial.org.uk @Lamparter
-/src/      @RiversideValley/Flux git@andrexial.org.uk @Lamparter
-*.md       @Lamparter @RiversideValley/Flux git@andrexial.org.uk
+/src/      @RiversideValley/Fluid git@andrexial.org.uk @Lamparter
+*.md       @Lamparter @RiversideValley/Fluid git@andrexial.org.uk
 /.github/  @Lamparter git@andrexial.org.uk
-*.fl       @RiversideValley/Flux git@andrexial.org.uk @Lamparter
+*.fl       @RiversideValley/Fluid git@andrexial.org.uk @Lamparter
 LICENSE.md @RiversideValley/Nightshade @Lamparter git@andrexial.org.uk
