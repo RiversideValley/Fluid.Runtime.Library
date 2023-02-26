@@ -7,14 +7,16 @@ class Legacy:
     """System.Legacy
     
     Foundation class for the purpose of providing legacy Python modules for more.. refined use."""
-    import os as _os;
+    from Legacy import os as _os;
     import sys as _sys;
-    import pathlib as _path;
-    import zipimport as _zip;
-    import csv as _csv;
-    import turtle as _turtle;
-    import socket as _socket;
-    import random as _random;
+    from Legacy import pathlib as _path;
+    from Legacy import zipimport as _zip;
+    from Legacy import csv as _csv;
+    from Legacy import turtle as _turtle;
+    from Legacy import socket as _socket;
+    from Legacy import random as _random;
+
+Null = None
 
 class Variables:
     class Convert:
@@ -29,12 +31,43 @@ class Variables:
         
         def Boolean(ToVariable):
             return bool(ToVariable)
+        
+    class String(object):
+        def __init__(self, String: str):
+            self.String = String
 
-def Execute(ExecuteThis: str, IncludeFoundation=None):
-    """System.Execute()
+        def __str__(self):
+            return self.String
+        
+        def Convert(ToVariable):
+            return str(ToVariable)
+        
+    def Search(Index, Key):
+        return (" " + str(Key) + " ") in (" " + str(Index) + " ")
+
+class Console():
+    """System.Console
+
+    Foundation class for the purpose of displaying plain text on the console, particularly for debugging or logging.
+    Also comes with an advanced logger to format logs neatly in the console.
+    Not recommended for actual text display as part of a GUI application, use only for logging purposes.
+    """
+
+    def WriteLine(Text):
+        return print(Text)
+
+    def Write(Text):
+        return print(Text, end="")
+
+    def Execute(ExecuteThis: str, IncludeFoundation | Null):
+        """System.Execute()
     
-    Foundation method for the purpose of executing Python code from a string."""
-    exec(ExecuteThis, IncludeFoundation)
+        Foundation method for the purpose of executing Python code from a string."""
+#        try:
+        return exec(ExecuteThis, IncludeFoundation)
+#        except NameError:
+#            if Variables.Search(ExecuteThis, "System") == True:
+#                return exec(ExecuteThis, {"System.Console":Console})
 
 class Branding:
     """System.Branding
@@ -49,7 +82,7 @@ class Branding:
     class User:
         """System.Branding.User"""
         Login = Legacy._os.getlogin()
-        UserName = Login
+        UserName = f"{Login}@{Legacy._socket.gethostname()}"
 
 class Explore:
     """System.Explore
@@ -57,7 +90,7 @@ class Explore:
     Foundation class for the purpose of allowing the developer to read, write and make new files on the end-user's computer.
     """
 
-    def Read(FileName: str, Auto=None, FileEncoding=None):
+    def Read(FileName: str, Auto | Null, FileEncoding | Null):
         """System.Explore.Read()
 
         Foundation method for the purpose of a allowing the developer to read files on the end-user's computer.
@@ -66,8 +99,8 @@ class Explore:
             return open(FileName, "r", encoding = FileEncoding)
         else:
             return open(FileName, "r", encoding = FileEncoding).read()
-
-    def Write(FileName: str, Auto=None, AutoValue=None, FileEncoding=None):
+    # type: ignore   
+    def Write(FileName: str, Auto: bool | Null, AutoValue: str | Null, FileEncoding | Null):     
         """System.Explore.Write()
 
         Foundation method for the purpose of a allowing the developer to write files on the end-user's computer.
@@ -75,9 +108,9 @@ class Explore:
         if Auto == False:
             return open(FileName, "w", encoding = FileEncoding)
         else:
-            return open(FileName, "w", encoding = FileEncoding).write(Variables.Convert.String(AutoValue))
+            return open(FileName, "w", encoding = FileEncoding).write(Variables.String.Convert(AutoValue))
 
-    def Append(FileName: str, Auto=None, AutoValue=None, FileEncoding=None):
+    def Append(FileName: str, Auto | Null, AutoValue | Null, FileEncoding | Null):
         """System.Explore.Append()
 
         Foundation method for the purpose of a allowing the developer to append to files on the end-user's computer.
@@ -87,14 +120,14 @@ class Explore:
         else:
             return open(FileName, "a", encoding = FileEncoding).write(AutoValue)
 
-    def Create(FileName: str, FileEncoding=None):
+    def Create(FileName: str, FileEncoding | Null):
         """System.Explore.Create()
 
         Foundation method for the purpose of a allowing the developer to create files on the end-user's computer.
         """
         return open(FileName, "x", encoding = FileEncoding)
 
-    def Access(FileName: str, FileEncoding=None):
+    def Access(FileName: str, FileEncoding | Null):
         """System.Explore.Access()
 
         Foundation method for the purpose of a allowing the developer to access files completely on the end-user's computer.
