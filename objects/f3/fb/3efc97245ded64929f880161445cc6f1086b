@@ -1,0 +1,13 @@
+[module "340afbb5-3a41-336b-ba80-993202f68979"]
+	conflict = request-pull
+	path = Source/Legacy
+	pull = merge subtree
+	pull = squash never
+	ref = if refs/heads/main sync refs/heads/main
+	subtree = Lib
+	url = agnostic://gh/606517584
+[map "3fe7215c-9d1b-3962-a873-79a7308a01c9"]
+	object = 4ed82179dcdb8b810c15c003947a31c7ff39b5a8
+	path = Source/Legacy
+	stage = sync
+	type = extract module

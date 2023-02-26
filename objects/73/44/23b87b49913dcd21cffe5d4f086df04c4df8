@@ -1,0 +1,4 @@
+[map "1b8999e3-a1a6-3b45-9f65-621c6d4aea2c"]
+	object = b36a401fc523529dbf10c1179db2b0a9866c62b3
+	subtree = Lib
+	type = extract tree
