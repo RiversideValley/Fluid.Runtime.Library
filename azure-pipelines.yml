@@ -33,5 +33,6 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    python src/System.py
+    cd src
+    python System.py
   displayName: 'Build Python'
