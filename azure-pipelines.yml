@@ -33,4 +33,4 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    python $(System.DefaultWorkingDirectory)/src/System.py
+    python $(System.DefaultWorkingDirectory)/Source/System.py
