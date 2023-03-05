@@ -33,6 +33,4 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    cd src
-    python System.py
-  displayName: 'Build Python'
+    python $(System.DefaultWorkingDirectory)\src\System.py
